@@ -1,0 +1,21 @@
+const progress = document.querySelector(".progress"),
+	minutes = document.querySelector("#minutes"),
+	seconds = document.querySelector("#seconds"),
+	body = document.querySelector("#colon"),
+	countdown = document.querySelector("#countdown"),
+	stop = document.querySelector("#stop"),
+	settings = document.querySelector("#settings");
+
+let minutesVal = parseInt(minutes.innerHTML),
+	secondsVal = parseInt(seconds.innerHTML),
+	progressVal = null,
+	progressStart = 0,
+	progressEnd = minutesVal * 60 + secondsVal,
+	speed = 1000,
+	degree = 360 / progressEnd,
+	toggle = false,
+	secondsLeft = 0,
+	minutesLeft = 0;
+
+minutes.contentEditable = true;
+seconds.contentEditable = true;

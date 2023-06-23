@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@1,700&family=Titillium+Web:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--background: #ff6f60;
+	--progress: #363645;
+	--timer: radial-gradient(circle, rgba(255, 255, 255, 0.1) 30%, rgba(50, 50, 50, 1) 100%);
+	--font-alpha: "Pathway Extreme", sans-serif;
+	--font-beta: "Titillium Web", sans-serif;
+	--text-clr: #fff;
+}
+
+body {
+	background: var(--background);
+	min-height: 100vh;
+	overflow: hidden;
+	color: var(--text-clr);
+	font-family: var(--font-alpha);
+	font-weight: bold;
+}
+
+.container {
+	height: 600px;
+	width: 600px;
+	display: grid;
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	place-items: center;
+}
+
+.progress {
+	display: grid;
+	place-items: center;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	background: var(--timer);
+	box-shadow: 0 0 500px rgba(255, 255, 255, 0.5);
+}
+
+.timer {
+	width: 350px;
+	height: 300px;
+	border-radius: 50%;
+	background: var(--progress);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.75);
+	padding: 3rem;
+}
+
+#countdown span {
+	display: inline;
+	font-size: 4.7rem;
+	letter-spacing: 0.001em;
+	text-shadow: 0 0 12px rgba(255, 150, 120, 0.9);
+}
+
+#stop {
+	cursor: pointer;
+	font-size: 2.25rem;
+	letter-spacing: 0.2em;
+	line-height: 1.75em;
+}
+
+#status {
+	font-size: 1.5rem;
+	letter-spacing: 0.2em;
+	margin-top: 0.1em;
+	margin-bottom: 0.4em;
+}
+
+#settings {
+	cursor: pointer;
+}
